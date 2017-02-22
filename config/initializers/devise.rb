@@ -6,7 +6,7 @@ Devise.setup do |config|
   # confirmation, reset password and unlock tokens in the database.
   # Devise will use the `secret_key_base` on Rails 4+ applications as its `secret_key`
   # by default. You can change it below and use your own secret key.
-  # config.secret_key = '80a02b823579877b81092653c8a6393094721e7aa88bb8b10d91acf4d994d0f5b738b66bd8648dd3274bfba633f940559405d6d76a0a8ce596f41881908787df'
+  # config.secret_key = 'ca6b9f0e73093a506bc3b0030cc3134549e807972e562c5f9905c2aefb29353c08bec3ffe53df33dee78269ddd1c390edcc720e9b8925e3e68a6bdb93ab447df'
 
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
@@ -99,7 +99,7 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 10
 
   # Setup a pepper to generate the encrypted password.
-  # config.pepper = 'a86a5512af26cd8e96dd8a2e8c619070a80c4109613faf53c8f68620154ae973e438dbf2ae5df29c53bcf8cb7e5a4d117ce57cfc3eabe8fc4c8ce7f81c22cfce'
+  # config.pepper = '84c5ef91d891d90cef4c46bcd6fbd22f7b9b7886740d273a5ecd732caa762d17817cc73a8a3663048bf83cce008069e0f22f8a3d94ec6ac8aa66c0e829231ba0'
 
   # Send a notification email when the user's password is changed
   # config.send_password_change_notification = false
@@ -234,8 +234,9 @@ Devise.setup do |config|
 
   # The default HTTP method used to sign out a resource. Default is :delete.
   config.sign_out_via = :delete
-  # binding.pry
-  config.omniauth :facebook, ENV['FACEBOOK_APP_ID'], ENV['FACEBOOK_SECRET'], scope: 'email', info_fields: 'name,email'
+  
+  config.omniauth :facebook, ENV['FACEBOOK_KEY'], ENV['FACEBOOK_SECRET']
+
   # ==> OmniAuth
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.

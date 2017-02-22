@@ -1,9 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'dotenv-rails', groups: [:development, :test]
-gem 'pry'
-gem 'omniauth'
-gem 'omniauth-facebook'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.2'
 # Use sqlite3 as the database for Active Record
@@ -26,6 +23,9 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
+gem 'devise'
+gem 'omniauth-facebook'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -35,10 +35,10 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-gem 'devise', '~> 4.2.0' # 3.5.4
+gem 'devise'
 gem 'devise_invitable'
 gem 'high_voltage'
-# gem 'sqlite3'
+gem 'sqlite3'
 group :development do
   gem 'better_errors'
   gem 'quiet_assets'
@@ -57,4 +57,3 @@ group :test do
   gem 'selenium-webdriver'
 end
 
-# gem 'dotenv'
